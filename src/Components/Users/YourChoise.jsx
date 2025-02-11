@@ -15,7 +15,7 @@ function YourChoise() {
   const handleDropdown = (index) => {
     setDropdown(dropdown === index ? null : index); 
   };
-   
+    
   return (
     <div>
         <div className=" px-72">
@@ -24,7 +24,7 @@ function YourChoise() {
         {filters.map((filter, index) => (
           <div key={index} className="w-1/4 relative">
             <div
-              className="bg-[#D9D9D9] rounded-sm py-5 px-4 capitalize font-medium flex justify-between items-center cursor-pointer"
+              className="bg-[#D9D9D9] dark:bg-red-900 rounded-sm py-5 px-4 capitalize font-medium flex justify-between items-center cursor-pointer"
               onClick={() => handleDropdown(index)}
             >
               {filter.label} <FontAwesomeIcon icon={faAngleDown} />

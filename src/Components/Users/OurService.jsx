@@ -12,7 +12,7 @@ function OurService() {
         {img:exchangeLogo , heading:'Exchange Offers', para:'Get the best deals by trading your old car.' },
     ]
   return (
-    <div className='px-72 bg-amber-10'>
+    <div className='px-72  pb-8'>
         <h1 className='font-bold text-2xl py-8 mt-16 capitalize'>our services</h1>
         <div className='bg-amber-5 grid grid-cols-2 gap-8 px-24'>
             {services.map((service, index)=>(

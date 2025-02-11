@@ -3,8 +3,8 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-        <footer className="bg-[#D9D9D9]  py-10">
-      <div className="container mx-auto px-12 grid md:grid-cols-4 gap-">
+        <footer className="bg-[#D9D9D9] py-10 w-full">
+      <div className="container mx-auto px-12 grid sm:grid-cols-4 text-center">
         
         {/* Logo & About */}
         <div>
