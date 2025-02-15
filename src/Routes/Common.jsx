@@ -5,6 +5,7 @@ import Service from '../Pages/Users/Service'
 import ServiceBooking from '../Pages/Users/ServiceBooking'
 import Signup from '../Pages/Users/SignUp'
 import Getquote from '../Pages/Users/Getquote'
+import EMI from '../Components/Users/EMI'
 
 function Common() {
   return (
@@ -14,6 +15,7 @@ function Common() {
         <Route path='/service-booking' element={<ServiceBooking/>}/>
         <Route path='/car-details' element={<Getquote/>}/>
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/emi' element={<EMI/>} />
     </Routes>
   )
 }

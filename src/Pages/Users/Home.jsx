@@ -41,7 +41,7 @@ function Home() {
 
         <div
         // ref={ref}
-          className={`w-2/4 h-2/4 transition-all duration-1000 ${show ? "translate-x-0" : "-translate-x-3/4"
+          className={`w-2/4 h-2/4 transition-all duration-1000 ${show ? "scale-100" : "scale-50"
                   }`}
           style={{
             background: `url(${car})`,
