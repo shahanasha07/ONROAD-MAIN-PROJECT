@@ -17,7 +17,7 @@ function Navbar() {
             </ul>
             <div className='flex gap-4'>
             <button className='bg-[#D9D9D9] dark:bg-[#da291c] font-extrabold  px-6 py-1 '> <Link to={'/signup'}>Sign up</Link> </button>
-            <ThemeToggle/>
+            {/* <ThemeToggle/> */}
             </div>
         </nav>
     </div>

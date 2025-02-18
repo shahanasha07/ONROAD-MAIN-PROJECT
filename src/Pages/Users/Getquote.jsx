@@ -161,7 +161,7 @@ function Getquote() {
             </div>
           </div>
           <div
-            className="border border-gray-400 w-1/2 sm:w-full lg:w-full md:h-[65vh] rounded-xl mt-16"
+            className="border border-gray-400 w-1/2 sm:w-full lg:w-full md:h-[55vh] rounded-xl mt-16"
             style={{
               background: `url(${car.img})`,
               backgroundRepeat: "no-repeat",
@@ -202,9 +202,7 @@ function Getquote() {
                 icon={faPen}
                 className="text-xs ml-2 opacity-90"
               />
-              <button>
-                <Link to={"/emi"}>EMI Calculator</Link>
-              </button>
+           
             </p>
             <div className="bg-[#d9d9d96d] w-full h-[20vh] rounded-md text-sm px-2 md:px-4 py-2 mt-2 ">
               <div className="bg-amber-3 border border-gray-300 rounded-sm flex gap-2 px-1 py-1  bg-white">
@@ -243,12 +241,12 @@ function Getquote() {
             {isEmiopen &&(
                <div className="fixed inset-0 bg-black/75 bg-opacity-60 flex items-center justify-center z-[99] ">
                <div className="relative bg-white p- rounded-lg max-w-3xl w-full">
-                 {/* <button
+                 <button
                    onClick={toggleEmi}
-                   className="absolute top-2 right-2 bg-gray-300 px-2 py- rounded-full"
+                   className="absolute top-2 right-2 bg-gray-50 px-2  rounded-full"
                  >
                    X
-                 </button> */}
+                 </button>
                  <EMI />
                </div>
              </div> 
