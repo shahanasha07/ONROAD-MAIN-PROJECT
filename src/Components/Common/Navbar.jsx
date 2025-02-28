@@ -13,7 +13,7 @@ function Navbar() {
                 <li><Link to={'/'} > New cars</Link> </li>
                 <li><Link to={'/used-cars'} > Used cars</Link> </li>
                 <li><Link to={'/service'} >Service</Link> </li>
-                <li><Link to={'/'} >Exchange</Link> </li>
+                <li><Link to={'/exchange-car'} >Exchange</Link> </li>
                 <li><Link to={'/'} >Insurance</Link> </li>
                 <li><Link to={'/'} >Contact</Link> </li>
             </ul>

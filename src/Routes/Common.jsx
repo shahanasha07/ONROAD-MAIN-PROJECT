@@ -7,6 +7,8 @@ import Signup from '../Pages/Users/SignUp'
 import Getquote from '../Pages/Users/Getquote'
 import EMI from '../Components/Users/EMI'
 import UsedCars from '../Pages/Users/UsedCars'
+import SellCarForm from '../Pages/Users/SellCarForm'
+import Exchange from '../Pages/Users/Exchange'
 
 function Common() {
   return (
@@ -18,6 +20,8 @@ function Common() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/emi' element={<EMI/>} />
         <Route path='/used-cars' element={<UsedCars/>} />
+        <Route path='/sell-car' element={<SellCarForm/>} />
+        <Route path='/exchange-car' element={<Exchange/>} />
     </Routes>
   )
 }

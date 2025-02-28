@@ -10,7 +10,7 @@ import Brands from "../../Components/Users/Brands";
 import YourChoise from "../../Components/Users/YourChoise";
 import OurService from "../../Components/Users/OurService";
 import Footer from "../../Components/Common/Footer";
-import { useInView } from "framer-motion";
+
 
 
 function Home() {
@@ -25,15 +25,15 @@ function Home() {
     <div className="bg-gray-200 dark:bg-black dark:text-white">
       <Navbar />
       <div
-        className="bg-gray-800 w-full h-screen flex flex-col justify-end items-center"
+        className=" w-full h-screen flex flex-col justify-end items-center"
         style={{ background: `url(${bg})` }}
       >
         <div className="bg-red-40 w-2/4 h-auto ">
-          <h1 className={`text-5xl/16 text-[#593636] text-center font-inter font-[800] itali transition-all duration-1000 ${show ? "translate-y-0" : "translate-x-3/4"
+          <h1 className={`text-5xl/16 text-[#593636] text-center font-inter font-[800] itali transition-all duration-1000 ${show ? "translate-y-0" : "translate-x-1/2"
                   }`}>
             Your One-Stop Solution for All Car Needs!
           </h1>
-          <p className={`text-2xl/8 text-[#593636] font-bold text-center px-28 pb-6 transition-all duration-700 ${show ? "translate-y-0" : "translate-x-3/4"
+          <p className={`text-2xl/8 text-[#593636] font-bold text-center px-28 pb-6 transition-all duration-700 ${show ? "translate-y-0" : "translate-x-1/2"
                   }`}>
             Discover cars, services, and insurance plans tailored to your needs.
           </p>
@@ -74,8 +74,8 @@ function Home() {
         </button>
       </div>
 
-      <Featured />
-      <Brands />
+      <Featured showCategory={true} />
+      <Brands heading='search car by brands' />
 
       {/* your choice */}
           <YourChoise/>
