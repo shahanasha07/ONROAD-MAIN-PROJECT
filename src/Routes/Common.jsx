@@ -9,6 +9,8 @@ import EMI from '../Components/Users/EMI'
 import UsedCars from '../Pages/Users/UsedCars'
 import SellCarForm from '../Pages/Users/SellCarForm'
 import Exchange from '../Pages/Users/Exchange'
+import NewCars from '../Pages/Users/NewCars'
+import AllUsedcars from '../Pages/Users/AllUsedcars'
 
 function Common() {
   return (
@@ -22,6 +24,8 @@ function Common() {
         <Route path='/used-cars' element={<UsedCars/>} />
         <Route path='/sell-car' element={<SellCarForm/>} />
         <Route path='/exchange-car' element={<Exchange/>} />
+        <Route path='/new-car' element={<NewCars/>} />
+        <Route path='/used' element={<AllUsedcars/>} />
     </Routes>
   )
 }

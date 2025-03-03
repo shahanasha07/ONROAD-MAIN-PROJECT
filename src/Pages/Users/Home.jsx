@@ -86,7 +86,9 @@ function Home() {
             <h1 className="capitalize font-bold text-5xl">Selling Your Car Is Easy With US </h1>
             <p className="py-5 w-[48vw] m-auto text-xl">Then you are at the right place. ONROAD is India s premier platform for buying,
             selling, and servicing luxury and premium cars.</p>
-            <button className="capitalize bg-[#D9D9D9] px-12 py-2 text-black rounded-sm font-bold mt-8 ">sell it now </button>
+            <Link to={'/sell-car'}> 
+            <button className="capitalize bg-[#D9D9D9] px-12 py-2 text-black rounded-sm font-bold mt-8 cursor-pointer">sell it now </button>
+            </Link>
           </div>`
 
           <Footer/>

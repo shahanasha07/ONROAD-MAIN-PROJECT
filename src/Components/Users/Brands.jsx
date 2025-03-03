@@ -432,7 +432,7 @@ function Brands(props) {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           navigation={{ nextEl: ".next", prevEl: ".prev" }}
           modules={[Navigation, Autoplay]}
-          className="relative mt-6"
+          className="relative mt-6 "
         >
           {getData().map((item, index) => (
             <SwiperSlide key={index}>
@@ -453,10 +453,14 @@ function Brands(props) {
             </SwiperSlide>
           ))}
         </Swiper>
+
+
+//     
+
       )}
 
       {/* Custom Navigation Buttons (Only for brands) */}
-      {selectedCategory === "brand" && (
+      {/* {selectedCategory === "brand" && (
         <div className="flex justify-center gap-4 mt-6">
           <button className="prev bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center shadow-md">
             <FontAwesomeIcon icon={faAngleLeft} className="text-2xl" />
@@ -465,7 +469,7 @@ function Brands(props) {
             <FontAwesomeIcon icon={faAngleRight} className="text-2xl" />
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

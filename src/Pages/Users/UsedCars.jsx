@@ -8,6 +8,7 @@ import Brands from '../../Components/Users/Brands'
 import Featured from '../../Components/Users/Featured';
 import Footer from '../../Components/Common/Footer';
 import SellYourCar from '../../Components/Users/SellYourCar';
+import { Link } from 'react-router-dom';
 
 function UsedCars() {
   const [expanded, setExpanded] = useState(false);
@@ -51,8 +52,9 @@ function UsedCars() {
             </button>
           </div>
           <div className="mt-3 flex gap-6 pl-1">
-            <button className="font-medium hover:underline">Sell Your Car</button>
-            <button className="font-medium hover:underline">Check Value of Your Car</button>
+
+            <button className="font-medium hover:text-gray-500"><Link to={'/sell-car'}>Sell Your Car</Link> </button>
+            <button className="font-medium hover:text-gray-500">Check Value of Your Car</button>
           </div>
         </div>
 

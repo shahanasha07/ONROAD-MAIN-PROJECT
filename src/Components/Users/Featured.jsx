@@ -250,7 +250,7 @@
 
 
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -271,6 +271,17 @@ function Featured({ showCategory }) {
   const isUsedCarPage = location.pathname === "/used-cars";
 
   const [selectedCategory , setSelectedCategory] =useState('trending')
+
+  const handleNavigateToUsedCars = () => {
+        navigate(`/used?category=all`);
+      };
+    
+
+const navigate = useNavigate();
+
+// const handleNavigateToUsedCars = (category) => {
+//   navigate(`/used-cars?category=${category}`);
+// };
 
   // Define car categories for the homepage
   const categories = {
@@ -313,7 +324,7 @@ function Featured({ showCategory }) {
 
       {/* Show category selection only on the homepage */}
       {showCategory && isHomePage && (
-        <ul className="flex gap-6 capitalize mt-4">
+        <ul className="flex gap-6 capitalize mt-4 pb-6">
           {["trending", "popular", "upcoming"].map((category) => (
             <li
               key={category}
@@ -336,10 +347,11 @@ function Featured({ showCategory }) {
         slidesPerView={3} // Show 3 slides at a time
         navigation={true} // Enable navigation
         modules={[Navigation]}
-        className="mb-6"
+        className="mb-6 "
       >
         {(isUsedCarPage ? popularUsedCars : categories[selectedCategory]).map((car, index) => (
           <SwiperSlide key={index} className="bg-[#D9D9D9] dark:bg-[#8E1616] w-1/3 h-[45vh] rounded-lg">
+            <Link to={`/car-details`} state={{ car }}> 
             <div className="w-full h-3/5 rounded-t-lg bg-white flex items-center justify-center">
               <img src={car.img} alt={car.name} className="w-4/5" />
             </div>
@@ -353,12 +365,110 @@ function Featured({ showCategory }) {
                   </Link>
                 </button>
               )}
+
             </div>
+            
+            </Link>
+            
           </SwiperSlide>
+          
         ))}
+        {isUsedCarPage && (
+
+            <button
+        className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        onClick={handleNavigateToUsedCars}
+      >
+        View All Used Cars
+      </button>
+        )}
       </Swiper>
     </div>
   );
 }
 
 export default Featured;
+
+
+
+// import React, { useState } from "react";
+// import { Link, useNavigate } from "react-router-dom";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+
+// // Import car images
+// import bmw from "../../assets/images/Common/ix1-bmw.webp";
+// import benz from "../../assets/images/Common/c-class-benz.webp";
+// import fortuner from "../../assets/images/Common/fortuner-toyota.webp";
+// import camry from "../../assets/images/Common/camry-toyota.webp";
+// import defender from "../../assets/images/Common/land-rover-defender.webp";
+// import rangeRover from "../../assets/images/Common/range-rover.webp";
+// import mahindra from "../../assets/images/Common/mahindra.webp";
+// import UsedCars from "../../Pages/Users/UsedCars";
+// import { div } from "framer-motion/client";
+
+// function Featured({ showCategory }) {
+//   const navigate = useNavigate();
+//   const [selectedCategory, setSelectedCategory] = useState("trending");
+
+//   // Define car categories
+//   const categories = {
+//     trending: [
+//       { img: rangeRover, name: "Land Rover Range Rover Velar", price: "1.12 Crore" },
+//       { img: bmw, name: "BMW iX1", price: "73.96 Lakh" },
+//       { img: benz, name: "Mercedes-Benz C-Class", price: "75.60 Lakh" },
+//       { img: fortuner, name: "Toyota Fortuner Legender", price: "56.49 Lakh" },
+//       { img: camry, name: "Toyota Camry", price: "61.42 Lakh" },
+//       { img: defender, name: "Land Rover Defender", price: "1.33 Crore" },
+//       { img: mahindra, name: "Mahindra XUV700", price: "17.17 Lakh" },
+//     ],
+//   };
+
+//   // Popular Used Cars (for Used Cars page)
+//   const popularUsedCars = [
+//     { img: fortuner, name: "Used Toyota Fortuner", price: "30.49 Lakh", category: "SUV" },
+//     { img: camry, name: "Used Toyota Camry", price: "35.42 Lakh", category: "Sedan" },
+//     { img: bmw, name: "Used BMW iX1", price: "48.96 Lakh", category: "Luxury" },
+//     { img: benz, name: "Used Mercedes-Benz C-Class", price: "50.60 Lakh", category: "Luxury" },
+//   ];
+
+//   const handleNavigateToUsedCars = () => {
+//     navigate(`/used?category=all`);
+//   };
+
+//   return (
+//     <div className="px-56 py-8">
+//       <h1 className="font-bold text-2xl">Featured Cars</h1>
+
+//       {/* Swiper Slider */}
+//       <Swiper spaceBetween={20} slidesPerView={3} navigation={true} modules={[Navigation]} className="mb-6">
+//         {categories[selectedCategory].map((car, index) => (
+//           <SwiperSlide key={index} className="bg-[#D9D9D9] dark:bg-[#8E1616] w-1/3 h-[45vh] rounded-lg">
+//             <Link to={`/car-details`} state={{ car }}>
+//               <div className="w-full h-3/5 rounded-t-lg bg-white flex items-center justify-center">
+//                 <img src={car.img} alt={car.name} className="w-4/5" />
+//               </div>
+//               <div className="px-6 py-4 leading-[1.8rem]">
+//                 <p>{car.name}</p>
+//                 <p className="font-bold">{car.price}</p>
+//               </div>
+//             </Link>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+
+//       {/* Button to go to Used Cars Page */}
+    
+//       <button
+//         className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+//         onClick={handleNavigateToUsedCars}
+//       >
+//         View All Used Cars
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default Featured;
