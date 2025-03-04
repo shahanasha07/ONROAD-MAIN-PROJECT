@@ -11,6 +11,7 @@ import SellCarForm from '../Pages/Users/SellCarForm'
 import Exchange from '../Pages/Users/Exchange'
 import NewCars from '../Pages/Users/NewCars'
 import AllUsedcars from '../Pages/Users/AllUsedcars'
+import Insurance from '../Pages/Users/Insurance'
 
 function Common() {
   return (
@@ -26,6 +27,7 @@ function Common() {
         <Route path='/exchange-car' element={<Exchange/>} />
         <Route path='/new-car' element={<NewCars/>} />
         <Route path='/used' element={<AllUsedcars/>} />
+        <Route path='/car-insurance' element={<Insurance/>} />
     </Routes>
   )
 }

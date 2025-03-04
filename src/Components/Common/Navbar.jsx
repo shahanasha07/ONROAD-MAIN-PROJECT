@@ -15,7 +15,7 @@ function Navbar() {
                 <li><Link to={'/used-cars'} > Used cars</Link> </li>
                 <li><Link to={'/service'} >Service</Link> </li>
                 <li><Link to={'/exchange-car'} >Exchange</Link> </li>
-                <li><Link to={'/'} >Insurance</Link> </li>
+                <li><Link to={'/car-insurance'} >Insurance</Link> </li>
             </ul>
             <div className='flex'>
               <input type="search" name="" id="" placeholder='search' className='border border-gray-500 outline-none px-2 w-[20vw] rounded-sm' />
