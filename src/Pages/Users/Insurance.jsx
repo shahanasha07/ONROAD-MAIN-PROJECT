@@ -47,12 +47,12 @@ function Insurance() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         {/* Left Section */}
-        <div className="w-full md:w-1/2 h-[70vh] flex flex-col justify-center items-start px-12 text-white">
+        <div className="w-full md:w-2/3 h-[70vh] flex flex-col justify-center items-start px-12 text-white">
           <h1 className="text-5xl font-bold leading-tight">
-            Sell your car in minutes
+          Secure your journey with the right insurance plan
           </h1>
           <p className="mt-3 text-lg">
-            Get doorstep pickup and instant payment
+          Get insured in minutes, enjoy doorstep service and instant claims!
           </p>
         </div>
         <div className='w-full md:ml- md:mt-8 lg:pl-72'>

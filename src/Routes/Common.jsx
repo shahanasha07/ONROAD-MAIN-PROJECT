@@ -12,6 +12,7 @@ import Exchange from '../Pages/Users/Exchange'
 import NewCars from '../Pages/Users/NewCars'
 import AllUsedcars from '../Pages/Users/AllUsedcars'
 import Insurance from '../Pages/Users/Insurance'
+import InsurancePlans from '../Pages/Users/InsurancePlans'
 
 function Common() {
   return (
@@ -28,6 +29,7 @@ function Common() {
         <Route path='/new-car' element={<NewCars/>} />
         <Route path='/used' element={<AllUsedcars/>} />
         <Route path='/car-insurance' element={<Insurance/>} />
+        <Route path='/insurance-plans' element={<InsurancePlans/>} />
     </Routes>
   )
 }
